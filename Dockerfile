@@ -3,9 +3,11 @@ MAINTAINER DqRkk <romain.gitlab@gmail.com>
 
 ENV DEBUG_MODE 0
 
-RUN apt-get update
+RUN apt-get update \
  && apt-get install -y vim freeradius freeradius-utils libperl5.18 perl perl-base libperl5.18 \
- && apt-get clean autoclean && apt-get autoremove -y && rm -rf /var/lib/{apt,dpkg,cache,log}/
+ && apt-get clean autoclean \
+ && apt-get autoremove -y \
+ && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 VOLUME ["/etc/freeradius/"]
 
