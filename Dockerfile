@@ -4,7 +4,7 @@ MAINTAINER DqRkk <romain.gitlab@gmail.com>
 ENV DEBUG_MODE 0
 
 RUN apt-get update \
- && apt-get install -y vim freeradius freeradius-utils libperl5.18 perl perl-base librpc-xml-perl \
+ && apt-get install -y freeradius freeradius-utils libperl5.18 perl perl-base librpc-xml-perl \
  && apt-get clean autoclean \
  && apt-get autoremove -y \
  && rm -rf /var/lib/{apt,dpkg,cache,log}/
